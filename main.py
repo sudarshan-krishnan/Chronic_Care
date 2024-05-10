@@ -34,6 +34,28 @@ if selected == 'Diabetes Prediction':
     DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function value')
     Age = st.text_input('Age of the Person')
 
+    # code for Prediction
+    diab_diagnosis = ''
+
+    # creating a button for Prediction
+
+    if st.button('Diabetes Test Result'):
+
+        user_input = [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin,
+                      BMI, DiabetesPedigreeFunction, Age]
+
+        user_input = [float(x) for x in user_input]
+
+        diab_prediction = diabetes_model.predict([user_input])
+
+        if diab_prediction[0] == 1:
+            diab_diagnosis = 'The person is diabetic'
+        else:
+            diab_diagnosis = 'The person is not diabetic'
+
+    st.success(diab_diagnosis)
+
+
 if selected == 'Heart Disease Prediction':
    
     # page title
