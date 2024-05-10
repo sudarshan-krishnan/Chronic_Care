@@ -4,11 +4,11 @@ from streamlit_option_menu import option_menu
 
 # loading 3 saved model
 
-# diabetes_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Predictor/saved_models/diabetes_model.sav' , 'wb'))
+# diabetes_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Predictor/saved_models/diabetes_model.sav' , 'rb'))
 
-# heart_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Predictor/saved_models/heart_disease_model.sav', 'wb'))
+# heart_disease_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Predictor/saved_models/heart_disease_model.sav', 'rb'))
 
-# parkinsons_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Predictor/saved_models/parkinsons_model.sav', 'wb'))
+# parkinsons_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Predictor/saved_models/parkinsons_model.sav', 'rb'))
 
 # creating sidebar
 
