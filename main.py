@@ -3,6 +3,10 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
+# getting the working directory of the main.py
+
+working_dir = os.path.dirname(os.path.abspath(__file__))
+
 # loading 3 saved model
 
 diabetes_model = pickle.load(open('diabetes_model.sav'))
@@ -19,6 +23,7 @@ with st.sidebar:
                            ['Diabetes Prediction' , 'Heart Disease Prediction' , 'Parkinsons Prediction'] ,
                            icons = ["activity" , "heart" , "person"] ,
                            default_index=0)
+    
     
 # Diabetes Prediction Page
 if selected == 'Diabetes Prediction':
@@ -74,7 +79,6 @@ if selected == 'Diabetes Prediction':
             diab_diagnosis = 'The person is not diabetic'
 
     st.success(diab_diagnosis)
-
 
 
 # Heart Disease Prediction Page
@@ -143,6 +147,7 @@ if selected == 'Heart Disease Prediction':
             heart_diagnosis = 'The person does not have any heart disease'
 
     st.success(heart_diagnosis)
+
 
 # Parkinson's Prediction Page
 if selected == "Parkinsons Prediction":
