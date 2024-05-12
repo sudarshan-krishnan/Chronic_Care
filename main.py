@@ -7,6 +7,11 @@ from streamlit_option_menu import option_menu
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
 
+# Adding logo 
+    
+with st.sidebar: 
+    st.image("logo.png")
+
 # loading 3 saved model
 
 diabetes_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Predictor/Models/diabetes_model.sav', 'rb'))
@@ -23,6 +28,13 @@ with st.sidebar:
                            ['Diabetes Prediction' , 'Heart Disease Prediction' , 'Parkinsons Prediction'] ,
                            icons = ["activity" , "heart" , "person"] ,
                            default_index=0)
+    
+# designing sidebar
+    
+with st.sidebar: 
+    st.title("AutoNickML")
+    # choice = st.radio("Navigation", ["Upload","Profiling","Modelling", "Download"])
+    st.info("This project application helps you build and explore your data.")
     
     
 # Diabetes Prediction Page
