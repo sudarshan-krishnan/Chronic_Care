@@ -7,6 +7,11 @@ from streamlit_option_menu import option_menu
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
 
+# Adding logo 
+    
+with st.sidebar: 
+    st.image("logo.png")
+
 # loading 3 saved model
 
 diabetes_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Predictor/Models/diabetes_model.sav', 'rb'))
@@ -19,17 +24,25 @@ parkinsons_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Pre
 
 with st.sidebar:
     
-    selected = option_menu('Multiple Disease Prediction System Using ML' , 
+    selected = option_menu('Multiple Disease Prediction System' , 
                            ['Diabetes Prediction' , 'Heart Disease Prediction' , 'Parkinsons Prediction'] ,
                            icons = ["activity" , "heart" , "person"] ,
                            default_index=0)
+    
+# designing sidebar
+    
+with st.sidebar: 
+    st.title("TITLE OF PROJECT")
+    st.info("This web app predicts diabetes using machine learning based on health metrics such as glucose level, blood pressure," +
+            "BMI, and more. Enter your data to receive an immediate assessment of your diabetes risk, helping in early diagnosis" +
+            " and management.")
     
     
 # Diabetes Prediction Page
 if selected == 'Diabetes Prediction':
 
     # page title
-    st.title('Diabetes Prediction using ML')
+    st.title('Diabetes Prediction')
 
     # getting the input data from the user
     col1, col2, col3 = st.columns(3)
@@ -85,7 +98,7 @@ if selected == 'Diabetes Prediction':
 if selected == 'Heart Disease Prediction':
 
     # page title
-    st.title('Heart Disease Prediction using ML')
+    st.title('Heart Disease Prediction')
 
     col1, col2, col3 = st.columns(3)
 
@@ -153,7 +166,7 @@ if selected == 'Heart Disease Prediction':
 if selected == "Parkinsons Prediction":
 
     # page title
-    st.title("Parkinson's Disease Prediction using ML")
+    st.title("Parkinson's Disease Prediction")
 
     col1, col2, col3, col4, col5 = st.columns(5)
 
