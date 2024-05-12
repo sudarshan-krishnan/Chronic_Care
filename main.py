@@ -9,11 +9,11 @@ working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # loading 3 saved model
 
-diabetes_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Predictor/Models/diabetes_model.sav'))
+diabetes_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Predictor/Models/diabetes_model.sav', 'rb'))
 
-heart_disease_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Predictor/Models/heart_disease_model.sav'))
+heart_disease_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Predictor/Models/heart_disease_model.sav', 'rb'))
 
-parkinsons_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Predictor/Models/parkinsons_model.sav'))
+parkinsons_model = pickle.load(open('/Users/sudarshan/Documents/Code/Disease_Predictor/Models/parkinsons_model.sav', 'rb'))
 
 # creating sidebar
 
