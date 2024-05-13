@@ -264,7 +264,7 @@ st.header(":male-doctor: Get In Touch With A Near By Doctor!")
 # Wrap the contact form HTML with a div and assign it a unique id
 contact_box_html = """
 <div id="contact-box">
-    <form action="https://formsubmit.co/YOUREMAIL@EMAIL.COM" method="POST">
+    <form action="https://formsubmit.co/chroniccare.help@gmail.com" method="POST">
          <input type="hidden" name="_captcha" value="false">
          <input type="text" name="name" placeholder="Your name" required>
          <input type="email" name="email" placeholder="Your email" required>
