@@ -257,3 +257,29 @@ if selected == "Parkinsons Prediction":
             parkinsons_diagnosis = "The person does not have Parkinson's disease"
 
     st.success(parkinsons_diagnosis)
+
+# Code for contact box
+st.header(":male-doctor: Get In Touch With A Near By Doctor!")
+
+# Wrap the contact form HTML with a div and assign it a unique id
+contact_box_html = """
+<div id="contact-box">
+    <form action="https://formsubmit.co/YOUREMAIL@EMAIL.COM" method="POST">
+         <input type="hidden" name="_captcha" value="false">
+         <input type="text" name="name" placeholder="Your name" required>
+         <input type="email" name="email" placeholder="Your email" required>
+         <textarea name="message" placeholder="Your message here"></textarea>
+         <button type="submit">Send</button>
+    </form>
+</div>
+"""
+
+st.markdown(contact_box_html, unsafe_allow_html=True)
+
+# Use Local CSS File
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+# Load CSS styles
+local_css("style/style.css")
