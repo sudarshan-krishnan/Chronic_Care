@@ -32,10 +32,11 @@ with st.sidebar:
 # designing sidebar
     
 with st.sidebar: 
-    st.title("TITLE OF PROJECT")
-    st.info("This web app predicts diabetes using machine learning based on health metrics such as glucose level, blood pressure," +
-            "BMI, and more. Enter your data to receive an immediate assessment of your diabetes risk, helping in early diagnosis" +
-            " and management.")
+    st.title("ChronicCare:")
+    st.subheader("Disease Progression Monitoring Platform")
+    st.info("This web app predicts your risk of diabetes, heart disease, or Parkinson's using machine learning from health metrics " +
+            " Input your data to receive a risk assessment and track your health" +
+            " progression over time, aiding in early diagnosis and proactive management.")
     
     
 # Diabetes Prediction Page
