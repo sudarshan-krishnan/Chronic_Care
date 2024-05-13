@@ -9,8 +9,8 @@ working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Adding logo 
     
-# with st.sidebar: 
-#    st.image("logo.png")
+with st.sidebar: 
+   st.image("logo.png")
 
 # loading 3 saved model
 
