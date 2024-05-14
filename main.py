@@ -53,7 +53,7 @@ def display_prediction(selected):
             st.success(diab_diagnosis)
 
             # Load the data for visualization
-            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/dataset/diabetes.csv'  # Update with the correct file path
+            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/CSV_Sample_Data/diabete_sample_patient_data.csv'
             diabetes_data = pd.read_csv(file_path)
 
             st.header("Diabetes Data Trends")
@@ -110,7 +110,7 @@ def display_prediction(selected):
             st.success(heart_diagnosis)
 
             # Load the data for visualization
-            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/dataset/heart.csv'  # Update with the correct file path
+            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/CSV_Sample_Data/heart_sample_data.csv'
             heart_data = pd.read_csv(file_path)
 
             st.header("Heart Disease Data Trends")
@@ -185,7 +185,7 @@ def display_prediction(selected):
             st.success(parkinsons_diagnosis)
 
             # Load the data for visualization
-            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/dataset/parkinsons.csv'  # Update with the correct file path
+            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/CSV_Sample_Data/parkinsons_sample_data.csv'
             parkinsons_data = pd.read_csv(file_path)
 
             st.header("Parkinson's Disease Data Trends")
