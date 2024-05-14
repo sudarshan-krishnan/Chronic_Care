@@ -53,17 +53,17 @@ def display_prediction(selected):
             st.success(diab_diagnosis)
 
             # Load the data for visualization
-            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/CSV_Sample_Data/diabete_sample_patient_data.csv'
-            diabetes_data = pd.read_csv(file_path)
+            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/Sample_data/diabete_sample_patient_data.xlsx'
+            diabetes_data = pd.read_excel(file_path, index_col=None)
+            diabetes_data.to_csv('diabetes_dataset.csv', index=None)
+
+            show_data = st.radio("Show raw data?", ("Yes", "No"))
+            if show_data == "Yes":
+                st.subheader("Raw Data")
+                st.dataframe(diabetes_data)
 
             st.header("Diabetes Data Trends")
             st.markdown("Visualizing trends in the diabetes dataset.")
-
-            # Option to show/hide raw data
-            show_raw_data = st.radio("Show Raw Data", ('Hide', 'Show'))
-            if show_raw_data == 'Show':
-                st.subheader("Raw Data")
-                st.write(diabetes_data)
 
             # Streamline plots for each factor
             factors = ['Pregnancies', 'SkinThickness', 'DiabetesPedigreeFunction', 'Glucose', 'Insulin', 'Age', 'BloodPressure', 'BMI']
@@ -116,17 +116,17 @@ def display_prediction(selected):
             st.success(heart_diagnosis)
 
             # Load the data for visualization
-            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/CSV_Sample_Data/heart_sample_data.csv'
-            heart_data = pd.read_csv(file_path)
+            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/Sample_data/heart_sample_data.xlsx'
+            heart_data = pd.read_excel(file_path, index_col=None)
+            heart_data.to_csv('heart_dataset.csv', index=None)
+
+            show_data = st.radio("Show raw data?", ("Yes", "No"))
+            if show_data == "Yes":
+                st.subheader("Raw Data")
+                st.dataframe(heart_data)
 
             st.header("Heart Disease Data Trends")
             st.markdown("Visualizing trends in the heart disease dataset.")
-
-            # Option to show/hide raw data
-            show_raw_data = st.radio("Show Raw Data", ('Hide', 'Show'))
-            if show_raw_data == 'Show':
-                st.subheader("Raw Data")
-                st.write(heart_data)
 
             # Streamline plots for each factor
             factors = ['age', 'trestbps', 'chol', 'thalach', 'oldpeak', 'slope', 'ca', 'thal']
@@ -197,17 +197,17 @@ def display_prediction(selected):
             st.success(parkinsons_diagnosis)
 
             # Load the data for visualization
-            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/CSV_Sample_Data/parkinsons_sample_data.csv'
-            parkinsons_data = pd.read_csv(file_path)
+            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/Sample_data/parkinsons_sample_data.xlsx'
+            parkinsons_data = pd.read_excel(file_path, index_col=None)
+            parkinsons_data.to_csv('parkinsons_dataset.csv', index=None)
+
+            show_data = st.radio("Show raw data?", ("Yes", "No"))
+            if show_data == "Yes":
+                st.subheader("Raw Data")
+                st.dataframe(parkinsons_data)
 
             st.header("Parkinson's Disease Data Trends")
             st.markdown("Visualizing trends in the Parkinson's disease dataset.")
-
-            # Option to show/hide raw data
-            show_raw_data = st.radio("Show Raw Data", ('Hide', 'Show'))
-            if show_raw_data == 'Show':
-                st.subheader("Raw Data")
-                st.write(parkinsons_data)
 
             # Streamline plots for each factor
             factors = ['MDVP:Fo(Hz)', 'MDVP:Fhi(Hz)', 'MDVP:Flo(Hz)', 'MDVP:Jitter(%)', 'MDVP:Jitter(Abs)', 'MDVP:RAP', 'MDVP:PPQ', 'Jitter:DDP', 
