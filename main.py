@@ -53,7 +53,7 @@ def display_prediction(selected):
             st.success(diab_diagnosis)
 
             # Load the data for visualization
-            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/Sample_data/diabete_sample_patient_data.xlsx'
+            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/sample_xlsx/diabetes_sample_data.xlsx'
             diabetes_data = pd.read_excel(file_path, index_col=None)
             diabetes_data.to_csv('diabetes_dataset.csv', index=None)
 
@@ -66,7 +66,8 @@ def display_prediction(selected):
             st.markdown("Visualizing trends in the diabetes dataset.")
 
             # Streamline plots for each factor
-            factors = ['Pregnancies', 'SkinThickness', 'DiabetesPedigreeFunction', 'Glucose', 'Insulin', 'Age', 'BloodPressure', 'BMI']
+            factors = ['Number of Pregnancies', 'Skin Thickness value', 'Diabetes Pedigree Function value', 'Glucose Level', 
+                       'Insulin Level', 'Age of the Person', 'Blood Pressure value', 'BMI value']
             titles = [
                 'Number of Pregnancies', 'Skin Thickness value', 'Diabetes Pedigree Function value',
                 'Glucose Level', 'Insulin Level', 'Age of the Person', 'Blood Pressure value', 'BMI value'
@@ -116,7 +117,7 @@ def display_prediction(selected):
             st.success(heart_diagnosis)
 
             # Load the data for visualization
-            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/Sample_data/heart_sample_data.xlsx'
+            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/sample_xlsx/heart_disease_sample_data.xlsx'
             heart_data = pd.read_excel(file_path, index_col=None)
             heart_data.to_csv('heart_dataset.csv', index=None)
 
@@ -197,7 +198,7 @@ def display_prediction(selected):
             st.success(parkinsons_diagnosis)
 
             # Load the data for visualization
-            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/Sample_data/parkinsons_sample_data.xlsx'
+            file_path = '/Users/sudarshan/Documents/Code/Disease_Predictor/sample_xlsx/parkinson_sample_data.xlsx'
             parkinsons_data = pd.read_excel(file_path, index_col=None)
             parkinsons_data.to_csv('parkinsons_dataset.csv', index=None)
 
